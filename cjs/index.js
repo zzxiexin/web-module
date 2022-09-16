@@ -1,2 +1,2 @@
-import cjs_module from "./module";
-console.log(cjs_module);
+const cjs_module = require("./module");
+console.warn("commojs module", cjs_module);

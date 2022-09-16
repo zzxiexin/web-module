@@ -1,2 +1,2 @@
 import log, { name } from "./module";
-console.log(name, log);
+console.warn("es6 module", log, name);

@@ -10,13 +10,16 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ log),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   "name": () => (/* binding */ name)
 /* harmony export */ });
 var name = "esm";
-function log() {
+
+var log = function log() {
   console.log("i am esm");
-}
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (log);
 
 /***/ })
 
@@ -85,7 +88,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module */ "./esm/module.js");
 
-console.log(_module__WEBPACK_IMPORTED_MODULE_0__.name, _module__WEBPACK_IMPORTED_MODULE_0__["default"]);
+console.warn("es6 module", _module__WEBPACK_IMPORTED_MODULE_0__["default"], _module__WEBPACK_IMPORTED_MODULE_0__.name);
 })();
 
 /******/ })()
