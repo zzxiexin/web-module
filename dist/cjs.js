@@ -7,11 +7,25 @@
   \***********************/
 /***/ ((module) => {
 
+var name = "cjs";
+var obj = {
+  a: 1
+};
 module.exports = {
-  name: "cjs",
+  name: name,
   age: 1,
+  obj: obj,
   say: function say() {
     console.log("i am cjs");
+  },
+  changeName: function changeName() {
+    name = "change cjs name";
+  },
+  changeObj: function changeObj() {
+    obj.a = 2;
+  },
+  getRealName: function getRealName() {
+    return name;
   }
 };
 
@@ -50,9 +64,24 @@ var __webpack_exports__ = {};
 /*!**********************!*\
   !*** ./cjs/index.js ***!
   \**********************/
-var cjs_module = __webpack_require__(/*! ./module */ "./cjs/module.js");
+var _require = __webpack_require__(/*! ./module */ "./cjs/module.js"),
+    name = _require.name,
+    getRealName = _require.getRealName,
+    changeName = _require.changeName,
+    changeObj = _require.changeObj,
+    obj = _require.obj;
 
-console.warn("commojs module", cjs_module);
+console.log("================commonjs测试=======================");
+console.log("===结论：基础类型会被缓存， commonjs引入的是基础值的copy=======");
+console.log(name);
+changeName();
+console.log(name);
+console.log("重新引入模块测试", (__webpack_require__(/*! ./module */ "./cjs/module.js").name));
+console.log("通过函数获取,避免缓存", getRealName());
+console.log("===结论：引用类型不会被缓存， commonjs引入的是基础值的copy=======");
+console.log(obj);
+changeObj();
+console.log(obj);
 })();
 
 /******/ })()

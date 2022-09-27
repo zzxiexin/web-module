@@ -10,6 +10,7 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "changeName": () => (/* binding */ changeName),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   "name": () => (/* binding */ name)
 /* harmony export */ });
@@ -19,6 +20,9 @@ var log = function log() {
   console.log("i am esm");
 };
 
+function changeName(str) {
+  name = str;
+}
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (log);
 
 /***/ })
@@ -281,13 +285,16 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module */ "./esm/module.js");
 
+console.log("====================es6 module测试=================", _module__WEBPACK_IMPORTED_MODULE_0__["default"], _module__WEBPACK_IMPORTED_MODULE_0__.name);
+console.log("es6 module===>", _module__WEBPACK_IMPORTED_MODULE_0__["default"], _module__WEBPACK_IMPORTED_MODULE_0__.name);
+(0,_module__WEBPACK_IMPORTED_MODULE_0__.changeName)("test");
 setTimeout(function () {
   __webpack_require__.e(/*! import() */ "esm_import_async_js").then(__webpack_require__.bind(__webpack_require__, /*! ./import_async */ "./esm/import_async.js")).then(function (_ref) {
     var async_name = _ref.name;
-    console.log(async_name);
+    console.log("异步引入测似====>", async_name);
+    console.log(_module__WEBPACK_IMPORTED_MODULE_0__.name);
   });
 }, 3000);
-console.warn("es6 module", _module__WEBPACK_IMPORTED_MODULE_0__["default"], _module__WEBPACK_IMPORTED_MODULE_0__.name);
 })();
 
 /******/ })()
