@@ -1,3 +1,5 @@
+#### commonjs 和 es6 的区别实践
+
 #### webpack 和 babel 作用
 
 ##### 1、babel 是一个 JS 编译器，用来将 ES6/ES7 等语法转换为 ES5 语法（浏览器不认识的语法编译成浏览器认识的语法），从而能够使代码在大部分浏览器中运行。但是 babel 转换语法时有一些新的 api 是不转化的，比如 promise、Object.assign 等，所以 babel 还提供了很多插件，如 babel-polyfill。
