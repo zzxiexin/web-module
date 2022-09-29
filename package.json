@@ -5,9 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack",
-    "server": "live-server ./dist",
-    "build": "nodemon -x npm run webpack --delay 2"
+    "serve": "live-server ./dist",
+    "build": "nodemon -x webpack --delay 2"
   },
   "keywords": [],
   "author": "",
