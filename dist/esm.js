@@ -285,7 +285,9 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module */ "./esm/module.js");
 
+
 console.log("====================es6 module测试=================");
+console.warn("default不能跟变量申明原因", _module__WEBPACK_IMPORTED_MODULE_0__);
 (0,_module__WEBPACK_IMPORTED_MODULE_0__.changeName)("test");
 setTimeout(function () {
   __webpack_require__.e(/*! import() */ "esm_import_async_js").then(__webpack_require__.bind(__webpack_require__, /*! ./import_async */ "./esm/import_async.js")).then(function (_ref) {
